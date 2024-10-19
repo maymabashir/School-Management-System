@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E6D4D984-1D34-4A3F-9C09-6E9F435EA215}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>student</RootNamespace>
+    <AssemblyName>student</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddPrivateTeacherBonus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPrivateTeacherBonus.Designer.cs">
+      <DependentUpon>AddPrivateTeacherBonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudent.Designer.cs">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTeacher.Designer.cs">
+      <DependentUpon>AddTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAddPrivateTeacherBonus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAddPrivateTeacherBonus.Designer.cs">
+      <DependentUpon>AdminAddPrivateTeacherBonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAddStudentCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAddStudentCharge.Designer.cs">
+      <DependentUpon>AdminAddStudentCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminAddTeacherCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminAddTeacherCharge.Designer.cs">
+      <DependentUpon>AdminAddTeacherCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPayTeacherSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPayTeacherSalary.Designer.cs">
+      <DependentUpon>AdminPayTeacherSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admission.Designer.cs">
+      <DependentUpon>Admission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="charging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="charging.Designer.cs">
+      <DependentUpon>charging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionClass.cs" />
+    <Compile Include="GeneralReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneralReport.Designer.cs">
+      <DependentUpon>GeneralReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SNTF.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SNTF.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student.Designer.cs">
+      <DependentUpon>Student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayAllTeacherSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayAllTeacherSalary.Designer.cs">
+      <DependentUpon>PayAllTeacherSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaySpecificTeacherSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaySpecificTeacherSalary.Designer.cs">
+      <DependentUpon>PaySpecificTeacherSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayTeacherSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayTeacherSalary.Designer.cs">
+      <DependentUpon>PayTeacherSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentPaidFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentPaidFee.Designer.cs">
+      <DependentUpon>StudentPaidFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentFee.Designer.cs">
+      <DependentUpon>StudentFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher.Designer.cs">
+      <DependentUpon>Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTeacherCharging.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTeacherCharging.Designer.cs">
+      <DependentUpon>AddTeacherCharging.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherSalary.Designer.cs">
+      <DependentUpon>TeacherSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TNPS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TNPS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UpdateStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateStudent.Designer.cs">
+      <DependentUpon>UpdateStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateTeacher.Designer.cs">
+      <DependentUpon>UpdateTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Update_Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Update_Users.Designer.cs">
+      <DependentUpon>Update_Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddPrivateTeacherBonus.resx">
+      <DependentUpon>AddPrivateTeacherBonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStudent.resx">
+      <DependentUpon>AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTeacher.resx">
+      <DependentUpon>AddTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAddPrivateTeacherBonus.resx">
+      <DependentUpon>AdminAddPrivateTeacherBonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAddStudentCharge.resx">
+      <DependentUpon>AdminAddStudentCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminAddTeacherCharge.resx">
+      <DependentUpon>AdminAddTeacherCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPayTeacherSalary.resx">
+      <DependentUpon>AdminPayTeacherSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admission.resx">
+      <DependentUpon>Admission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="charging.resx">
+      <DependentUpon>charging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneralReport.resx">
+      <DependentUpon>GeneralReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SNTF.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SNTF.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student.resx">
+      <DependentUpon>Student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayAllTeacherSalary.resx">
+      <DependentUpon>PayAllTeacherSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaySpecificTeacherSalary.resx">
+      <DependentUpon>PaySpecificTeacherSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayTeacherSalary.resx">
+      <DependentUpon>PayTeacherSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentPaidFee.resx">
+      <DependentUpon>StudentPaidFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentFee.resx">
+      <DependentUpon>StudentFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher.resx">
+      <DependentUpon>Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTeacherCharging.resx">
+      <DependentUpon>AddTeacherCharging.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherSalary.resx">
+      <DependentUpon>TeacherSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TNPS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TNPS.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateStudent.resx">
+      <DependentUpon>UpdateStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateTeacher.resx">
+      <DependentUpon>UpdateTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Update_Users.resx">
+      <DependentUpon>Update_Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registartion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addmision.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\student2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finance1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TSalary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_4991416.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher_2354280.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_1321938.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people_6718167.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out_10117477.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogIn2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\studentReport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacherReport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher report.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
